@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "./static/css/main.5f361e03.chunk.css",
-    "main.js": "./static/js/main.99c08b45.chunk.js",
-    "main.js.map": "./static/js/main.99c08b45.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.6157de50.js",
-    "runtime-main.js.map": "./static/js/runtime-main.6157de50.js.map",
-    "static/js/2.9815ea5e.chunk.js": "./static/js/2.9815ea5e.chunk.js",
-    "static/js/2.9815ea5e.chunk.js.map": "./static/js/2.9815ea5e.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.ecdcd273baa5c9b8f0d6d902ef92eb3e.js": "./precache-manifest.ecdcd273baa5c9b8f0d6d902ef92eb3e.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "./static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.9815ea5e.chunk.js.LICENSE.txt": "./static/js/2.9815ea5e.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "./static/media/logo.5d5d9eef.svg"
+    "main.css": "/iith-dashboard-pwa/static/css/main.38855743.chunk.css",
+    "main.js": "/iith-dashboard-pwa/static/js/main.eae63eeb.chunk.js",
+    "main.js.map": "/iith-dashboard-pwa/static/js/main.eae63eeb.chunk.js.map",
+    "runtime-main.js": "/iith-dashboard-pwa/static/js/runtime-main.ffbfa73f.js",
+    "runtime-main.js.map": "/iith-dashboard-pwa/static/js/runtime-main.ffbfa73f.js.map",
+    "static/css/2.0fd05e11.chunk.css": "/iith-dashboard-pwa/static/css/2.0fd05e11.chunk.css",
+    "static/js/2.e133d6b8.chunk.js": "/iith-dashboard-pwa/static/js/2.e133d6b8.chunk.js",
+    "static/js/2.e133d6b8.chunk.js.map": "/iith-dashboard-pwa/static/js/2.e133d6b8.chunk.js.map",
+    "index.html": "/iith-dashboard-pwa/index.html",
+    "precache-manifest.0ab6ca2fdd4a1415884f02afee35ed06.js": "/iith-dashboard-pwa/precache-manifest.0ab6ca2fdd4a1415884f02afee35ed06.js",
+    "service-worker.js": "/iith-dashboard-pwa/service-worker.js",
+    "static/css/2.0fd05e11.chunk.css.map": "/iith-dashboard-pwa/static/css/2.0fd05e11.chunk.css.map",
+    "static/css/main.38855743.chunk.css.map": "/iith-dashboard-pwa/static/css/main.38855743.chunk.css.map",
+    "static/js/2.e133d6b8.chunk.js.LICENSE.txt": "/iith-dashboard-pwa/static/js/2.e133d6b8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.6157de50.js",
-    "static/js/2.9815ea5e.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.99c08b45.chunk.js"
+    "static/js/runtime-main.ffbfa73f.js",
+    "static/css/2.0fd05e11.chunk.css",
+    "static/js/2.e133d6b8.chunk.js",
+    "static/css/main.38855743.chunk.css",
+    "static/js/main.eae63eeb.chunk.js"
   ]
 }
