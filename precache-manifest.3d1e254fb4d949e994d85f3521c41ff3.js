@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "72f9e1a025d269d6c258d995d759d0fd",
+    "revision": "fa9bb5e38c32931c09c1302b8e2fafe4",
     "url": "/iith-dashboard-pwa/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/iith-dashboard-pwa/static/css/2.0fd05e11.chunk.css"
   },
   {
-    "revision": "16c0252d614c2355407c",
+    "revision": "6b250aee5410dc26e4b1",
     "url": "/iith-dashboard-pwa/static/css/main.38855743.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/iith-dashboard-pwa/static/js/2.1af4abde.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "16c0252d614c2355407c",
-    "url": "/iith-dashboard-pwa/static/js/main.8a7a49f8.chunk.js"
+    "revision": "6b250aee5410dc26e4b1",
+    "url": "/iith-dashboard-pwa/static/js/main.4e7fa546.chunk.js"
   },
   {
     "revision": "e33c282976578059c928",
