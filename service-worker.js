@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/iith-dashboard-pwa/precache-manifest.0ab6ca2fdd4a1415884f02afee35ed06.js"
+  "/iith-dashboard-pwa/precache-manifest.22b7238734d255ce35a5994dde7444f4.js"
 );
 
 self.addEventListener('message', (event) => {
