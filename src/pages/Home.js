@@ -187,23 +187,44 @@ function Home({
   const getEvents = () => {
     const today = new Date();
     const currentEvents = [];
-    let count = 0;
     for (let i = 0; i < events.length; i += 1) {
       const event = events[i];
-      const eventDate = new Date(event.start);
-      if (
-        eventDate.getDate() === today.getDate()
-        && eventDate.getMonth() === today.getMonth()
-        && eventDate.getFullYear() === today.getFullYear()
-      ) {
-        const newEvent = {};
-        newEvent.title = event.title;
-        const endDate = new Date(event.end);
-        if (
-          eventDate.getDate() === endDate.getDate()
-          && eventDate.getMonth() === endDate.getMonth()
-          && eventDate.getFullYear() === endDate.getFullYear()
+      let eventDate = new Date();
+      eventDate.setHours(0, 0, 0);
+      let endDate = new Date();
+
+      if (event?.startTime) {
+        // recurring Event.
+        if (!event.daysOfWeek.includes(today.getDay())) {
+          // event does not occur on given Day
+          eventDate = new Date(0); // hacky fix
+        } else if (
+          event.startRecur
+          && Date.parse(event.startRecur) > today.getTime()
         ) {
+          // event has not started yet
+          eventDate = new Date(event.startRecur);
+        } else if (
+          event.endRecur
+          && Date.parse(event.endRecur) <= today.getTime()
+        ) {
+          // event has already ended
+          eventDate = new Date(event.endRecur);
+        }
+        // set the Time for eventDate and endDate. Works only for HH:MM:SS
+        const eventStart = event.startTime.split(':');
+        const eventEnd = event.endTime.split(':');
+
+        eventDate.setHours(eventStart[0], eventStart[1], eventStart[2]);
+        endDate.setHours(eventEnd[0], eventEnd[1], eventEnd[2]);
+      } else {
+        // normal Event
+        eventDate = new Date(event.start);
+        endDate = new Date(event.end);
+      }
+      if (eventDate && eventDate.toDateString() === today.toDateString()) {
+        const newEvent = { title: event.title, timestamp: '' };
+        if (eventDate.toDateString() === endDate.toDateString()) {
           newEvent.timestamp = `${eventDate.getHours().toString()}:${
             eventDate.getMinutes().toString() === '0'
               ? '00'
@@ -213,14 +234,11 @@ function Home({
               ? '00'
               : endDate.getMinutes().toString()
           }`;
-        } else {
-          newEvent.timestamp = '';
         }
-        count += 1;
         currentEvents.push(newEvent);
       }
     }
-    if (count === 0) {
+    if (currentEvents.length === 0) {
       return (
         <div>
           <Typography>Plenty of time to spare!</Typography>
@@ -439,3 +457,7 @@ Home.defaultProps = {
 };
 
 export default Home;
+
+// TODO: Date Refactoring
+// Replace multicomparisons with toDateString() comparisons
+// For recursive events, do a check for "startTime", and then daysofWeek()
